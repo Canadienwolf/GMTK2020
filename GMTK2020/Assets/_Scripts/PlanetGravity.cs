@@ -6,15 +6,17 @@ using UnityEngine;
 public class PlanetGravity : MonoBehaviour
 {
     public float mass;
+    [Range(1, 10)]
+    public float pullRestistance;
     public float speed;
     public Vector3 startVel;
 
-    PlanetGravity[] planets;
+    PlanetMass[] planets;
     [HideInInspector] public Vector3 currentVel;
 
     private void Awake()
     {
-        planets = FindObjectsOfType<PlanetGravity>();
+        planets = FindObjectsOfType<PlanetMass>();
 
         currentVel = startVel;
     }
@@ -27,7 +29,7 @@ public class PlanetGravity : MonoBehaviour
             {
                 float sqaureDist = (planets[i].GetComponent<Rigidbody>().position - GetComponent<Rigidbody>().position).sqrMagnitude;
                 Vector3 forceDir = (planets[i].GetComponent<Rigidbody>().position - GetComponent<Rigidbody>().position).normalized;
-                Vector3 force = forceDir * planets[i].mass;
+                Vector3 force = forceDir * planets[i].mass / pullRestistance;
                 Vector3 acceleration = force / mass;
                 currentVel += acceleration * Time.fixedDeltaTime * speed / 10;
             }
