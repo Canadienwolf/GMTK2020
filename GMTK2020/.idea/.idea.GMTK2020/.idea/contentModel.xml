@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\frank\AppData\Local\JetBrains\Rider2020.1\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\frank\AppData\Local\JetBrains\Rider2020.1\resharper-host\Local\Transient\ReSharperHost\v201\SolutionCaches\_GMTK2020.1589983002.00" t="ExcludeRecursive" />
+    <e p="D:\Unity\GMTK2020\GMTK2020" t="IncludeRecursive">
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="_Scripts" t="Include">
+          <e p="GameManager.cs" t="Include" />
+          <e p="MeteorBehaviour.cs" t="Include" />
+          <e p="MeteorSpawner.cs" t="Include" />
+          <e p="PlanetGravity.cs" t="Include" />
+          <e p="PlanetMass.cs" t="Include" />
+          <e p="PlayerController.cs" t="Include" />
+        </e>
+        <e p="Models" t="Include">
+          <e p="Somestuff.cs" t="Include" />
+        </e>
+        <e p="Sprites" t="Include">
+          <e p="stuff002.cs" t="Include" />
+        </e>
+        <e p="Textures" t="Include">
+          <e p="stuff003.cs" t="Include" />
+        </e>
+      </e>
+      <e p="GMTK2020.sln" t="IncludeFlat" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="Temp\bin" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>
