@@ -9,6 +9,8 @@
 /[Bb]uilds/
 /[Ll]ogs/
 /[Mm]emoryCaptures/
+Temp/
+Library/
 
 # Never ignore Asset meta data
 !/[Aa]ssets/**/*.meta
@@ -60,4 +62,27 @@ sysinfo.txt
 
 # Crashlytics generated file
 crashlytics-build.properties
+
+# ============ #
+# OS generated #
+# ============ #
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+
+
+
+CubeClone/Temp/UnityLockfile
+
+CubeClone/Library/SourceAssetDB
+
+*.log
+
+CubeClone/Library/ShaderCache/EditorEncounteredVariants
+
 
