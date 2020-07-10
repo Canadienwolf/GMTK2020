@@ -17,7 +17,6 @@ public class PlanetGravity : MonoBehaviour
     private void Awake()
     {
         planets = FindObjectsOfType<PlanetMass>();
-
         currentVel = startVel;
     }
 
