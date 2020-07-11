@@ -151,6 +151,7 @@ GameObject:
   - component: {fileID: 1806199019354614267}
   - component: {fileID: 1806199019354614266}
   - component: {fileID: 1806199019354614265}
+  - component: {fileID: 4374187501253875016}
   m_Layer: 0
   m_Name: spr_planet_01
   m_TagString: Untagged
@@ -235,3 +236,16 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 4.519757
   m_Center: {x: 0, y: 0.120045654, z: 0}
+--- !u!114 &4374187501253875016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1806199019354614260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ebb6ba54c8eeac43b5e32c952590a49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selfDestruct: 0

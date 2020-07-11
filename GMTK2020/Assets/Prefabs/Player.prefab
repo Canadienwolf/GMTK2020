@@ -95,6 +95,7 @@ GameObject:
   - component: {fileID: 4815809078575311730}
   - component: {fileID: 4815809078575311726}
   - component: {fileID: 4815809078575311727}
+  - component: {fileID: 5264128857452397591}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -188,3 +189,20 @@ MonoBehaviour:
   rotSpeed: 10
   cam: {fileID: 0}
   gravity: 0
+  inOrbit: 0
+--- !u!114 &5264128857452397591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4815809078575311728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f74d64e05923b4540bfc033fc79cb2f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentFuel: 100
+  reductionSpeed: 10
+  fillSpeed: 20
+  player: {fileID: 4815809078575311727}

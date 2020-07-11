@@ -24,9 +24,10 @@ public class LevelGenerator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Vector3.Distance(player.transform.position, spawnPos) < 150)
+        if (player != null)
         {
-            SpawnPlanet();
+            if (Vector3.Distance(player.transform.position, spawnPos) < 300)
+                SpawnPlanet();
         }
     }
 
@@ -44,6 +45,6 @@ public class LevelGenerator : MonoBehaviour
         }
 
         spawnPos.x = 0;
-        spawnPos += new Vector3(Random.Range(-100, 100), Random.Range(70, 90), 0);
+        spawnPos += new Vector3(Random.Range(-40, 40), Random.Range(70, 80), 0);
     }
 }

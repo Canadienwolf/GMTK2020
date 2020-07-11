@@ -14,12 +14,14 @@ public class alt_player : MonoBehaviour
     Vector3 targetDir = new Vector3();
     bool clockwise;
     Vector3 camOffset = new Vector3(0, 0, -10);
+    public bool inOrbit;
 
     private void Update()
     {
         transform.Translate(Vector3.up * Time.deltaTime * forwardSpeed);
         transform.rotation = Quaternion.Euler(new Vector3(0, 0, transform.eulerAngles.z));
         cam.transform.position = transform.position + camOffset;
+        inOrbit = currentPlanet != null ? true : false;
 
         if (gravity && Input.GetKeyDown("space"))
         {
@@ -46,8 +48,8 @@ public class alt_player : MonoBehaviour
         currentPlanet = planet;
         gravity = true;
 
-        Vector3 dir = currentPlanet.position - transform.position;
-        clockwise = dir.x > 0 ? true : false;
+        Vector3 dir = transform.InverseTransformDirection(transform.position - currentPlanet.position);
+        clockwise = dir.x < 0 ? true : false;
     }
 
     public void RemovePlanet(Transform planet)

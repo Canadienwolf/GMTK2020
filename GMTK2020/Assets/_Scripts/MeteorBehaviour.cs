@@ -17,26 +17,19 @@ public class MeteorBehaviour : MonoBehaviour
     void Start()
     {
        player = GameObject.FindWithTag("Player");
-       lastPlayerDir = player.transform.position - transform.position;
-       timeToDeath = 20000;
+       if(player != null)
+         lastPlayerDir = player.transform.position - transform.position;
+        Invoke("KillObj", 5);
     }
 
     // Update is called once per frame
     void Update()
     {
         transform.Translate(lastPlayerDir * Time.deltaTime * speed);
-
-        timeToDeath--;
-        
-        if (timeToDeath == 0)
-        { 
-            Destroy(gameObject);
-        }
     }
 
-    private void OnCollisionEnter(Collision other)
+    void KillObj()
     {
-        print("I have collided");
         Destroy(gameObject);
     }
 }

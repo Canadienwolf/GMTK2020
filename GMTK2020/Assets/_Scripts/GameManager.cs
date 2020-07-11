@@ -1,18 +1,30 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public static Action Die;
+
+    void OnEnable()
     {
-        
+        Die += Died;
     }
 
-    // Update is called once per frame
-    void Update()
+    void OnDisable()
     {
-        
+        Die -= Died;
+    }
+
+
+    public static void Kill()
+    {
+        Die.Invoke();
+    }
+
+    void Died()
+    {
+        print("died");
     }
 }

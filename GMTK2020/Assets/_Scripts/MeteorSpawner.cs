@@ -11,8 +11,8 @@ public class MeteorSpawner : MonoBehaviour
     
     //---------------------------------------------------------------------------------------------------------------------------------
     
-    private float _min = 0.1f;
-    private float _max = 0.9f;
+    private float _min = 1f;
+    private float _max = 2f;
     
     private float _currentTime;
     private float _spawnTime;
