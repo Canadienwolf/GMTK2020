@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class alt_player : MonoBehaviour
 {
-    public float forwardSpeed = 10f;
+    public float forwardSpeed = 40f;
     public float rotSpeed = 10f;
     public Camera cam;
 
