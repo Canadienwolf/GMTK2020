@@ -31,7 +31,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/_Scripts/MeteorSpawner.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Scripts/MeteorBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/48 Particle Effect Pack/Script/csShowAllEffect.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Scripts/SolarFlarController.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -85,7 +85,7 @@
       <option name="presentableId" value="Default" />
       <updated>1594414087108</updated>
       <workItem from="1594414090258" duration="6550000" />
-      <workItem from="1594477489987" duration="7346000" />
+      <workItem from="1594477489987" duration="7945000" />
     </task>
     <servers />
   </component>
