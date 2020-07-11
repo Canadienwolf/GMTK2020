@@ -4,14 +4,21 @@ using UnityEngine;
 
 public class alt_player : MonoBehaviour
 {
-    public bool gravity;
     public float forwardSpeed = 10f;
+    public float rotSpeed = 10f;
+    public Camera cam;
+
+    [HideInInspector] public bool gravity;
 
     Transform currentPlanet;
+    Vector3 targetDir = new Vector3();
+    bool clockwise;
+    Vector3 camOffset = new Vector3(0, 0, -10);
 
     private void Update()
     {
         transform.Translate(Vector3.up * Time.deltaTime * forwardSpeed);
+        cam.transform.position = transform.position + camOffset;
 
         if (gravity && Input.GetKeyDown("space"))
         {
@@ -20,9 +27,16 @@ public class alt_player : MonoBehaviour
 
         if (gravity && currentPlanet != null)
         {
-            print(transform.position - currentPlanet.position);
-            gravity = false;
-            //transform.right = Vector3.MoveTowards(transform.right, transform.position - currentPlanet.position + new Vector3(0, 0, 10), Time.deltaTime * 100);
+            if (clockwise)
+            {
+                targetDir = (currentPlanet.position + transform.TransformDirection(Vector3.up * -5)) - (transform.position);
+            }
+            else
+            {
+                targetDir = (transform.position) - (currentPlanet.position + transform.TransformDirection(Vector3.up * -5));
+            }
+
+            transform.right = Vector3.MoveTowards(transform.right, targetDir, Time.deltaTime * rotSpeed);
         }
     }
 
@@ -30,5 +44,14 @@ public class alt_player : MonoBehaviour
     {
         currentPlanet = planet;
         gravity = true;
+
+        Vector3 dir = currentPlanet.position - transform.position;
+        clockwise = dir.x > 0 ? true : false;
+    }
+
+    public void RemovePlanet()
+    {
+        currentPlanet = null;
+        gravity = false;
     }
 }
