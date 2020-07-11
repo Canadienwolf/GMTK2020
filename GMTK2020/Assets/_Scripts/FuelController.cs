@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class FuelController : MonoBehaviour
 {
@@ -9,10 +10,12 @@ public class FuelController : MonoBehaviour
     public float reductionSpeed = 10;
     public float fillSpeed = 20;
     public alt_player player;
+    public Slider slider;
 
     private void Update()
     {
         ChangeFuel();
+        slider.value = currentFuel;
     }
 
     void ChangeFuel()

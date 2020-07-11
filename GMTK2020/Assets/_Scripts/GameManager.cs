@@ -2,13 +2,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
     public static Action Die;
     public Transform player;
-    public int score;
-
+    public Text scoreTxt;
+    
+    private int score = 0;
     private float furthestDist;
 
     void OnEnable()
@@ -23,7 +25,12 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        
+        if (score < player.position.y)
+        {
+            score = (int)player.position.y;
+        }
+
+        scoreTxt.text = "Score: " + score;
     }
 
 

@@ -10,7 +10,7 @@ public class Deadly : MonoBehaviour
     {
         if(collision.gameObject.tag == "Player")
         {
-            Destroy(collision.gameObject);
+            collision.gameObject.SetActive(false);
             GameManager.Kill();
         }
 
