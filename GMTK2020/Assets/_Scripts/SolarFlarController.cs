@@ -25,11 +25,9 @@ public class SolarFlarController : MonoBehaviour
 
         if (_currentTime >= _spawnTime)
         {
-            
             _spawnTime = 0;
-            _currentTime = 0;
             StartCoroutine(SunFlare());
-            _spawnTime = Random.Range(1, 10);
+            _spawnTime = Random.Range(40, 100);
         }
     }
 
@@ -38,15 +36,20 @@ public class SolarFlarController : MonoBehaviour
         print("it ran");
         text.SetActive(true);
         
-            
-        new WaitForSeconds(50);
-        image.GetComponent<Image>().color = new Color(255, 255, 0 , 255);
+        yield return new WaitForSeconds(5);
+        print("100");
+        image.GetComponent<Image>().color = new Color32(255, 255, 0 , 100);
+        
+        
+        yield return new WaitForSeconds(5);
+        print("255");
+        image.GetComponent<Image>().color = new Color32(255, 255, 0 , 255);
         print("snuffy stuff");
         text.SetActive(false);
         print("it ran");
 
-        new WaitForSeconds(10);
-        image.GetComponent<Image>().color = new Color(255, 255, 0 , 0);
+        yield return new WaitForSeconds(2);
+        image.GetComponent<Image>().color = new Color32(255, 255, 0 , 0);
 
         yield return null;
     }
