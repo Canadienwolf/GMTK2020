@@ -18,6 +18,7 @@ public class alt_player : MonoBehaviour
     private void Update()
     {
         transform.Translate(Vector3.up * Time.deltaTime * forwardSpeed);
+        transform.rotation = Quaternion.Euler(new Vector3(0, 0, transform.eulerAngles.z));
         cam.transform.position = transform.position + camOffset;
 
         if (gravity && Input.GetKeyDown("space"))
