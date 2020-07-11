@@ -26,6 +26,7 @@ public class MeteorBehaviour : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
-        Destroy(this);
+        print("I have collided");
+        Destroy(gameObject);
     }
 }

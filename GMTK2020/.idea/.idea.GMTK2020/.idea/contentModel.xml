@@ -21,9 +21,6 @@
         <e p="Models" t="Include">
           <e p="Somestuff.cs" t="Include" />
         </e>
-        <e p="Sprites" t="Include">
-          <e p="stuff002.cs" t="Include" />
-        </e>
         <e p="Textures" t="Include">
           <e p="stuff003.cs" t="Include" />
         </e>
