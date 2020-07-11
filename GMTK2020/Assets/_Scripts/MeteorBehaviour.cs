@@ -7,6 +7,8 @@ public class MeteorBehaviour : MonoBehaviour
 {
     public float speed;
 
+    public float timeToDeath;
+
     private GameObject player;
     private float step;
     private Vector3 lastPlayerDir;
@@ -16,12 +18,20 @@ public class MeteorBehaviour : MonoBehaviour
     {
        player = GameObject.FindWithTag("Player");
        lastPlayerDir = player.transform.position - transform.position;
+       timeToDeath = 20000;
     }
 
     // Update is called once per frame
     void Update()
     {
         transform.Translate(lastPlayerDir * Time.deltaTime * speed);
+
+        timeToDeath--;
+        
+        if (timeToDeath == 0)
+        { 
+            Destroy(gameObject);
+        }
     }
 
     private void OnCollisionEnter(Collision other)
