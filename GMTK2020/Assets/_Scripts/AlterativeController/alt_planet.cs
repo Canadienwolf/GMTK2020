@@ -6,9 +6,11 @@ public class alt_planet : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player")
-        {
-            other.GetComponent<alt_player>().CurrentPlanet(transform);
-        }
+        other.GetComponent<alt_player>()?.CurrentPlanet(transform);
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        other.GetComponent<alt_player>()?.RemovePlanet();
     }
 }
