@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6681138125437437775}
   - component: {fileID: 7313984457788556210}
   m_Layer: 0
-  m_Name: Sphere
+  m_Name: Meteor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -106,3 +106,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97cc34941ca401b4baad859fad98628a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 1
