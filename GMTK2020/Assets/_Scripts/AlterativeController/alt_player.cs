@@ -50,9 +50,12 @@ public class alt_player : MonoBehaviour
         clockwise = dir.x > 0 ? true : false;
     }
 
-    public void RemovePlanet()
+    public void RemovePlanet(Transform planet)
     {
-        currentPlanet = null;
-        gravity = false;
+        if (currentPlanet == planet)
+        {
+            currentPlanet = null;
+            gravity = false;
+        }
     }
 }

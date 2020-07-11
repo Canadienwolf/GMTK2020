@@ -11,6 +11,6 @@ public class alt_planet : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        other.GetComponent<alt_player>()?.RemovePlanet();
+        other.GetComponent<alt_player>()?.RemovePlanet(transform);
     }
 }
