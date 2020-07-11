@@ -38,8 +38,8 @@
       <list>
         <option value="$PROJECT_DIR$/Assets/_Scripts/MeteorSpawner.cs" />
         <option value="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Script/csShowAllEffect.cs" />
-        <option value="$PROJECT_DIR$/Assets/_Scripts/MeteorBehaviour.cs" />
         <option value="$PROJECT_DIR$/Assets/_Scripts/SolarFlarController.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Scripts/MeteorBehaviour.cs" />
       </list>
     </option>
   </component>
@@ -86,7 +86,7 @@
       <option name="presentableId" value="Default" />
       <updated>1594414087108</updated>
       <workItem from="1594414090258" duration="6550000" />
-      <workItem from="1594477489987" duration="14340000" />
+      <workItem from="1594477489987" duration="15929000" />
     </task>
     <servers />
   </component>

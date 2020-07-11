@@ -7,8 +7,10 @@ public class MeteorBehaviour : MonoBehaviour
 {
     public float speed;
 
+    public GameObject Explosion;
     public float timeToDeath;
 
+    
     private GameObject player;
     private float step;
     private Vector3 lastPlayerDir;
@@ -30,6 +32,7 @@ public class MeteorBehaviour : MonoBehaviour
 
     void KillObj()
     {
+        Explosion.GetComponent<ParticleSystem>().Play();
         Destroy(gameObject);
     }
 }
