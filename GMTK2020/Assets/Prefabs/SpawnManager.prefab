@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &9067648263845026804
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9067648263845026805}
+  - component: {fileID: 9067648263845026794}
+  m_Layer: 0
+  m_Name: SpawnManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9067648263845026805
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9067648263845026804}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &9067648263845026794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9067648263845026804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfa1128190929014eaca489b4181251e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  planets:
+  - {fileID: 1806199019077873223, guid: 4511999dbfb387449a298bf2139868d8, type: 3}
+  - {fileID: 8765896336492455790, guid: d953df001a47fa84baaf01c0361f690d, type: 3}
+  - {fileID: 1517175668974856987, guid: d0983b6d3ce25f443a5067c5e479a43c, type: 3}
+  - {fileID: 3081723382850556391, guid: eb2dcc1a4f215234da92e7faeb290479, type: 3}
+  - {fileID: 5106228453788346170, guid: d88ff6c092f3aa9469919363e8281841, type: 3}
+  - {fileID: 5616854933666276134, guid: bb78940789a056347b3f084428e25af6, type: 3}
+  - {fileID: 3798162471695356122, guid: 772b8fdbf08c64c4f9754353b7591b78, type: 3}
+  - {fileID: 8688381751697827382, guid: fae3e74b173e21642866f3e3c9025c0e, type: 3}
+  - {fileID: 3597952367215793207, guid: b1e086e19f4241641a5db1d0a6503077, type: 3}
+  - {fileID: 265150781510559438, guid: 72fea85a6b3510f48b3f3092c42d79f9, type: 3}
+  difficultyInterval: 1
