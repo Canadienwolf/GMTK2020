@@ -64,6 +64,7 @@ public class alt_player : MonoBehaviour
 
     private void OnDisable()
     {
-        Instantiate(explotion, transform.position, Quaternion.identity);
+        if(explotion != null)
+            Instantiate(explotion, transform.position, Quaternion.identity);
     }
 }
