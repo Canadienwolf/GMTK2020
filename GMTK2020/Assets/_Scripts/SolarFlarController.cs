@@ -38,12 +38,12 @@ public class SolarFlarController : MonoBehaviour
         
         yield return new WaitForSeconds(5);
         print("100");
-        image.GetComponent<Image>().color = new Color32(255, 255, 0 , 100);
+        image.GetComponent<Image>().color = new Color32(255, 255, 80, 100);
         
         
         yield return new WaitForSeconds(5);
         print("255");
-        image.GetComponent<Image>().color = new Color32(255, 255, 0 , 255);
+        image.GetComponent<Image>().color = new Color32(255, 255, 80, 255);
         print("snuffy stuff");
         text.SetActive(false);
         print("it ran");
