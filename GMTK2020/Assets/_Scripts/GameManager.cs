@@ -9,9 +9,11 @@ public class GameManager : MonoBehaviour
     public static Action Die;
     public Transform player;
     public Text scoreTxt;
+    public Text bestScoreTxt;
     
     private int score = 0;
     private float furthestDist;
+    private int bestScore;
 
     void OnEnable()
     {
@@ -41,6 +43,9 @@ public class GameManager : MonoBehaviour
 
     void Died()
     {
-        print("died");
+        bestScore = PlayerPrefs.GetInt("Score");
+        bestScore = bestScore < score ? score : bestScore;
+        PlayerPrefs.SetInt("Score", bestScore);
+        bestScoreTxt.text = "Best Score: " + bestScore;
     }
 }
