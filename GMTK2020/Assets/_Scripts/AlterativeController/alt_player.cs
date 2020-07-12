@@ -7,6 +7,7 @@ public class alt_player : MonoBehaviour
     public float forwardSpeed = 40f;
     public float rotSpeed = 10f;
     public Camera cam;
+    public ParticleSystem explotion;
 
     [HideInInspector] public bool gravity;
 
@@ -59,5 +60,10 @@ public class alt_player : MonoBehaviour
             currentPlanet = null;
             gravity = false;
         }
+    }
+
+    private void OnDisable()
+    {
+        Instantiate(explotion, transform.position, Quaternion.identity);
     }
 }

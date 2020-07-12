@@ -19,6 +19,11 @@ public class DeathBehavior : MonoBehaviour
 
     void Died()
     {
+        Invoke("ActivateDeathMenu", 1);
+    }
+
+    void ActivateDeathMenu()
+    {
         menu.SetActive(true);
     }
 }
