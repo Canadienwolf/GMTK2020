@@ -7,7 +7,6 @@ public class alt_player : MonoBehaviour
     public float forwardSpeed = 40f;
     public float rotSpeed = 10f;
     public Camera cam;
-    public ParticleSystem explotion;
 
     [HideInInspector] public bool gravity;
 
@@ -15,14 +14,12 @@ public class alt_player : MonoBehaviour
     Vector3 targetDir = new Vector3();
     bool clockwise;
     Vector3 camOffset = new Vector3(0, 0, -10);
-    public bool inOrbit;
 
     private void Update()
     {
         transform.Translate(Vector3.up * Time.deltaTime * forwardSpeed);
         transform.rotation = Quaternion.Euler(new Vector3(0, 0, transform.eulerAngles.z));
         cam.transform.position = transform.position + camOffset;
-        inOrbit = currentPlanet != null ? true : false;
 
         if (gravity && Input.GetKeyDown("space"))
         {
@@ -57,14 +54,8 @@ public class alt_player : MonoBehaviour
     {
         if (currentPlanet == planet)
         {
-            currentPlanet = null;
-            gravity = false;
+            //currentPlanet = null;
+            //gravity = false;
         }
-    }
-
-    private void OnDisable()
-    {
-        if(explotion != null)
-            Instantiate(explotion, transform.position, Quaternion.identity);
     }
 }

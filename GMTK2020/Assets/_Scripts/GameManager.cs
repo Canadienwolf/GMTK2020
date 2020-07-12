@@ -10,7 +10,8 @@ public class GameManager : MonoBehaviour
     public Transform player;
     public Text scoreTxt;
     public Text bestScoreTxt;
-    
+    public ParticleSystem explotion;
+
     private int score = 0;
     private float furthestDist;
     private int bestScore;
@@ -43,6 +44,8 @@ public class GameManager : MonoBehaviour
 
     void Died()
     {
+        if (explotion != null)
+            Instantiate(explotion, player.position, Quaternion.identity);
         bestScore = PlayerPrefs.GetInt("Score");
         bestScore = bestScore < score ? score : bestScore;
         PlayerPrefs.SetInt("Score", bestScore);
