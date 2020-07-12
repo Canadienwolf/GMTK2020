@@ -4942,6 +4942,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.5
+  Explosion: {fileID: 4993448067348661454}
   timeToDeath: 0
 --- !u!54 &4384727622755589070
 Rigidbody:
