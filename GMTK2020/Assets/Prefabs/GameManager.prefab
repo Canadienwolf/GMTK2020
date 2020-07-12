@@ -50,6 +50,8 @@ MonoBehaviour:
   player: {fileID: 0}
   scoreTxt: {fileID: 0}
   bestScoreTxt: {fileID: 0}
+  explotion: {fileID: 6291364993422463411, guid: d2d67c082b4e7d545b4b0fe29c751cad,
+    type: 3}
 --- !u!114 &600764111975929751
 MonoBehaviour:
   m_ObjectHideFlags: 0

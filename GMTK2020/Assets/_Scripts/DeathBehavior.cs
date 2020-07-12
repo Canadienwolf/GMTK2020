@@ -15,6 +15,7 @@ public class DeathBehavior : MonoBehaviour
     void OnDisable()
     {
         GameManager.Die -= Died;
+        Time.timeScale = 1;
     }
 
     void Died()
@@ -25,5 +26,6 @@ public class DeathBehavior : MonoBehaviour
     void ActivateDeathMenu()
     {
         menu.SetActive(true);
+        Time.timeScale = 0;
     }
 }

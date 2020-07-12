@@ -20,7 +20,7 @@ public class FuelController : MonoBehaviour
 
     void ChangeFuel()
     {
-        if (player.inOrbit)
+        if (player.gravity)
         {
             currentFuel = Mathf.MoveTowards(currentFuel, 100, Time.deltaTime * fillSpeed);
         }
